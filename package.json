@@ -29,8 +29,9 @@
     "heroku-postbuild": "npm run install-client && npm run build-client",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
-    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\""
-    
+    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
+    "install-server": "npm install",
+    "install-dependencies": " npm run install-client && npm run install-server "
   },
   "keywords": [],
   "author": "",
@@ -40,6 +41,6 @@
     "concurrently": "^7.3.0"
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.15.1"
   }
 }
